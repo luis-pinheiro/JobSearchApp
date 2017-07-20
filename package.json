@@ -1,0 +1,29 @@
+{
+  "name": "ph",
+  "version": "1.0.0",
+  "description": "ph search and extract video links",
+  "main": "ph.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ap": "npm cache clean && node ap",
+    "pmv": "npm cache clean && node pmv",
+    "tp": "npm cache clean && node tp"
+  },
+  "keywords": [
+    "ph"
+  ],
+  "author": "Luis Pinheiro",
+  "license": "ISC",
+  "dependencies": {
+    "d3-dsv": "^1.0.3",
+    "electron": "^1.4.15",
+    "jsdom": "^11.1.0",
+    "nightmare": "^2.9.1"
+  },
+  "devDependencies": {
+    "jQuery": "^1.7.4",
+    "jquery": "^3.2.1",
+    "mocha": "^3.4.2",
+    "vo": "^4.0.2"
+  }
+}
