@@ -1,29 +1,27 @@
 {
-  "name": "ph",
+  "name": "jobsearchapp",
   "version": "1.0.0",
-  "description": "ph search and extract video links",
-  "main": "ph.js",
+  "description": "Automated app for job search.",
+  "main": "search.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "ap": "npm cache clean && node ap",
-    "pmv": "npm cache clean && node pmv",
-    "tp": "npm cache clean && node tp"
+    "start": "node search.js"
   },
   "keywords": [
-    "ph"
+    "jobsearch",
+    "nightmarejs",
+    "nodejs",
+    "javascript",
+    "npm",
+    "app",
+    "automated",
+    "electron"
   ],
   "author": "Luis Pinheiro",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "d3-dsv": "^1.0.3",
     "electron": "^1.4.15",
-    "jsdom": "^11.1.0",
-    "nightmare": "^2.9.1"
-  },
-  "devDependencies": {
-    "jQuery": "^1.7.4",
     "jquery": "^3.2.1",
-    "mocha": "^3.4.2",
-    "vo": "^4.0.2"
+    "nightmare": "^2.9.1"
   }
 }

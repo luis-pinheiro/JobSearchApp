@@ -3,8 +3,8 @@
 
 
 "@types/node@^7.0.18":
-  version "7.0.37"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.37.tgz#f129fff94d14a60c3d99eadb9fe0c98119e09c8f"
+  version "7.0.38"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.38.tgz#140ecc61930b328e72914237c58dd62c8829e94d"
 
 ajv@^4.9.1:
   version "4.11.8"
@@ -214,8 +214,8 @@ electron-download@^3.0.1:
     sumchecker "^1.2.0"
 
 electron@^1.4.15, electron@^1.4.4:
-  version "1.7.4"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-1.7.4.tgz#db8b85ae98dffb7a82938e5ea6eed3cb66f62a65"
+  version "1.7.5"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-1.7.5.tgz#065a3102bf8b87102df50c50985fefe6c569045b"
   dependencies:
     "@types/node" "^7.0.18"
     electron-download "^3.0.1"
@@ -428,6 +428,10 @@ isarray@~1.0.0:
 isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
+
+jquery@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.2.1.tgz#5c4d9de652af6cd0a770154a631bba12b015c787"
 
 jsbn@~0.1.0:
   version "0.1.1"
