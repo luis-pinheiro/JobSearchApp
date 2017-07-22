@@ -3,8 +3,6 @@ const jquery = require('jquery');
 const fs = require('fs');
 const { csvFormat } = require('d3-dsv');
 
-
-
 let jobs = [];
 
 nightmare = Nightmare({
@@ -17,6 +15,8 @@ nightmare = Nightmare({
     title: 'JobSearchApp',
     width: 1300,
     height: 700,
+    // loadTimeout: 5000, // in ms
+    // executionTimeout: 5000 // in ms
 });
 
 // Define ItJobs function
@@ -69,6 +69,7 @@ let glassdoor = function() {
                 });
                 return glassJobs;
             })
+
     }
 };
 
@@ -96,11 +97,42 @@ let indeed = function() {
                 });
                 return indeedJobs;
             })
+            
+    }
+};
+
+// Empregosonline.pt
+// #ctl00_plhMain_SearchJobOfferResultsUpdatePanel > section
+let empregosonline = function() {
+    console.log("==============================");
+    console.log("= SCRAPING EMPREGOSONLINE.PT =");
+    console.log("==============================");
+    return function(nightmare) {
+        selector = 'pesquisaItem';
+        nightmare
+            .goto('http://www.empregosonline.pt/Pesquisa/Results.aspx?search=developer&cat=&zon=2')
+            .inject('js', './node_modules/jquery/dist/jquery.min.js')
+            .wait()
+            .evaluate(function() {
+                let empregosonlineJobs = [];
+                $('.pesquisaItem').each(function() {
+                    eo = {};
+                    eo["title"] = $(this).find("h3 > a > strong").text();
+                    let extractedLink = $(this).find("h3 > a").attr("href");
+                    eo["link"] = "http://www.empregosonline.pt" + extractedLink;
+                    eo["logo"] = $(this).find(".resultPesquisa_img > a > img").attr("src");
+                    eo["company"] = $(this).find(".subInfo > a").text();
+                    eo["location"] = 'Distrito de Aveiro';
+                    eo["date"] = $(this).find("span:nth-child(4)").text();
+                    eo["source"] = "Empregosonline.pt";
+                    empregosonlineJobs.push(eo);
+                });
+                return empregosonlineJobs;
+            })
     }
 };
 
 nightmare
-
     /* itjobs.pt */
     // .use(itJobs())
     // .then(function(itJobs) {
@@ -114,23 +146,29 @@ nightmare
     // })
 
     /* indeed.pt */
-    .then(() => nightmare.use(indeed()))
-    .then(function(indeedJobs) {
-        jobs.push(indeedJobs);
-        
+    // .then(() => nightmare.use(indeed()))
+    // .then(function(indeedJobs) {
+    //     jobs.push(indeedJobs);
+    // })
+
+    /* empregosonline.pt */
+    .then(() => nightmare.use(empregosonline())) 
+    .then(function(empregosonlineJobs){
+        jobs.push(empregosonlineJobs);
     })
+
     .then(function(content) {
-         content = JSON.stringify(jobs).replace(/\[|\]|\\n/g, " ");
-
-        // jobs = content;
-
+        content = JSON.stringify(jobs).replace(/\[|\]|\\n/g, " ");
         fs.writeFile("./jobsearch.json", content, 'utf8', function(err) {
             if (err) {
                 return console.log(err);
             }
             console.log("The file was saved!");
         });
-        return nightmare.end();
+        
     })
-    // .end()
-    .then(() => console.log("jobs results -> ", jobs));
+    .then(() => console.log("jobs results -> ", jobs))
+    .then(() => nightmare.end())
+    .catch(function(error) {
+        console.log(error);
+    });

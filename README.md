@@ -7,12 +7,9 @@ Built with nightmarejs.
 - https://www.itjobs.pt
 - https://www.glassdoor.com
 - https://www.indeed.pt
-
+- http://www.empregosonline.pt/
 
 ### Going to scrape
-- http://www.net-empregos.com/
-- http://emprego.sapo.pt/emprego/ofertas.htm/pais/portugal
-- http://www.empregosonline.pt/
 - https://www.emprego.pt/
 - http://www.kellyservices.pt/
 - https://www.olx.pt/emprego/aveiro/?search%5Bdescription%5D=1
@@ -26,3 +23,4 @@ Built with nightmarejs.
 - http://www.empregocm.pt/
 - http://www.empregoestagios.com/ofertas-emprego/
 - https://www.linkedin.com/jobs/
+- http://www.net-empregos.com/
