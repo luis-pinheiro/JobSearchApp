@@ -102,7 +102,6 @@ let indeed = function() {
 };
 
 // Empregosonline.pt
-// #ctl00_plhMain_SearchJobOfferResultsUpdatePanel > section
 let empregosonline = function() {
     console.log("==============================");
     console.log("= SCRAPING EMPREGOSONLINE.PT =");
@@ -128,6 +127,38 @@ let empregosonline = function() {
                     empregosonlineJobs.push(eo);
                 });
                 return empregosonlineJobs;
+            })
+    }
+};
+
+
+// emprego.pt
+let emprego = function() {
+    console.log("=======================");
+    console.log("= SCRAPING EMPREGO.PT =");
+    console.log("=======================");
+    return function(nightmare) {
+        selector = 'pesquisaItem';
+        nightmare
+            .goto('https://www.emprego.pt/jobs')
+            .inject('js', './node_modules/jquery/dist/jquery.min.js')
+            .wait()
+            .click('input[]')
+            .evaluate(function() {
+                let empregoJobs = [];
+                $('.pesquisaItem').each(function() {
+                    eo = {};
+                    eo["title"] = $(this).find("h3 > a > strong").text();
+                    let extractedLink = $(this).find("h3 > a").attr("href");
+                    eo["link"] = "http://www.emprego.pt" + extractedLink;
+                    eo["logo"] = $(this).find(".resultPesquisa_img > a > img").attr("src");
+                    eo["company"] = $(this).find(".subInfo > a").text();
+                    eo["location"] = 'Distrito de Aveiro';
+                    eo["date"] = $(this).find("span:nth-child(4)").text();
+                    eo["source"] = "emprego.pt";
+                    empregoJobs.push(eo);
+                });
+                return empregoJobs;
             })
     }
 };
