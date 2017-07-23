@@ -5,6 +5,8 @@ const { csvFormat } = require('d3-dsv');
 
 let jobs = [];
 
+let cre = require('./credentials.js');
+
 nightmare = Nightmare({
     openDevTools: {
         mode: 'right'
@@ -143,7 +145,11 @@ let emprego = function() {
             .goto('https://www.emprego.pt/jobs')
             .inject('js', './node_modules/jquery/dist/jquery.min.js')
             .wait()
-            .click('input[]')
+            .click('body > header > nav > div > div.navbar-collapse.collapse > ul.nav.navbar-nav.navbar-right > li > button')
+            .wait(5000)
+            .screenshot('screenshot.png')
+            .click('input[name="email"]')
+            .insert('input[name="email", '']')
             .evaluate(function() {
                 let empregoJobs = [];
                 $('.pesquisaItem').each(function() {
@@ -183,10 +189,17 @@ nightmare
     // })
 
     /* empregosonline.pt */
-    .then(() => nightmare.use(empregosonline())) 
-    .then(function(empregosonlineJobs){
-        jobs.push(empregosonlineJobs);
+    // .then(() => nightmare.use(empregosonline())) 
+    // .then(function(empregosonlineJobs){
+    //     jobs.push(empregosonlineJobs);
+    // })
+
+    /* Empregos.pt */
+    .then(() => nightmare.use(emprego()))
+    .then(function(empregoJobs) {
+        jobs.push(empregoJobs);
     })
+    
 
     .then(function(content) {
         content = JSON.stringify(jobs).replace(/\[|\]|\\n/g, " ");
@@ -199,7 +212,7 @@ nightmare
         
     })
     .then(() => console.log("jobs results -> ", jobs))
-    .then(() => nightmare.end())
+    // .then(() => nightmare.end())
     .catch(function(error) {
         console.log(error);
     });
