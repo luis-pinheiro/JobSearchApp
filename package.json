@@ -1,33 +1,34 @@
 {
-    "name": "jobsearchapp",
-    "version": "1.0.0",
-    "description": "Automated app for job search.",
-    "main": "search.js",
-    "scripts": {
-        "debug": "set DEBUG=nightmare & node search.js",
-        "start": "node search"
-    },
-    "keywords": [
-        "jobsearch",
-        "nightmarejs",
-        "nodejs",
-        "javascript",
-        "npm",
-        "app",
-        "automated",
-        "electron"
-    ],
-    "author": "Luis Pinheiro",
-    "license": "ISC",
-    "devDependencies": {
-        "chai": "^4.1.0",
-        "chai-as-promised": "^7.1.1",
-        "d3-dsv": "^1.0.3",
-        "electron": "^1.4.15",
-        "jquery": "^3.2.1",
-        "nightmare": "^2.9.1"
-    },
-    "dependencies": {
-        "mocha-generators": "^2.0.0"
-    }
+  "name": "jobsearchapp",
+  "version": "1.0.0",
+  "description": "Automated app for job search.",
+  "main": "search.js",
+  "scripts": {
+    "debug": "set DEBUG=nightmare & node search.js",
+    "start": "node search"
+  },
+  "keywords": [
+    "jobsearch",
+    "nightmarejs",
+    "nodejs",
+    "javascript",
+    "npm",
+    "app",
+    "automated",
+    "electron"
+  ],
+  "author": "Luis Pinheiro",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "chai-as-promised": "^7.1.1",
+    "cheerio": "^1.0.0-rc.2",
+    "d3-dsv": "^1.0.3",
+    "electron": "^1.4.15",
+    "jquery": "^3.2.1",
+    "nightmare": "^2.9.1"
+  },
+  "dependencies": {
+    "mocha-generators": "^2.0.0"
+  }
 }

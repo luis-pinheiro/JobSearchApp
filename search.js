@@ -1,52 +1,75 @@
 const Nightmare = require('nightmare');
 const jquery = require('jquery');
 const fs = require('fs');
-const { csvFormat } = require('d3-dsv');
+const {
+    csvFormat
+} = require('d3-dsv');
+const $ = require('cheerio');
+const Linkedin = require('./plugins/linkedin.js');
+const duck = require('./plugins/duck.js');
+const itJobs = require('./plugins/itJobs');
 
 let jobs = [];
 
-let cre = require('./credentials.js');
+const cred = require('./credentials.json');
+console.log("cred -> ", cred.user);
+
+const email = cred.user;
+const pass = cred.pass;
+const job = cred.job;
+const location = cred.location;
 
 nightmare = Nightmare({
-    openDevTools: {
-        mode: 'right'
-    },
+    // openDevTools: {
+    //     mode: 'bottom'
+    // },
     show: true,
-    pollInterval: 50, //in ms
+    // pollInterval: 50, //in ms
     alwaysOnTop: false,
     title: 'JobSearchApp',
     width: 1300,
-    height: 700,
+    height: 600,
     // loadTimeout: 5000, // in ms
     // executionTimeout: 5000 // in ms
 });
 
+Nightmare.action('clearCache',
+    function(name, options, parent, win, renderer, done) {
+        parent.respondTo('clearCache', function(done) {
+            win.webContents.session.clearCache(done);
+        });
+        done();
+    },
+    function(message, done) {
+        this.child.call('clearCache', done);
+    });
+
 // Define ItJobs function
-let itJobs = function() {
-    console.log("======================");
-    console.log("= SCRAPING ITJOBS.PT =");
-    console.log("======================");
-    return function(nightmare) {
-        nightmare
-            .goto('https://www.itjobs.pt/emprego?location=1&q=frontend&sort=date')
-            .wait()
-            .evaluate(function() {
-                let itJobs = [];
-                $('div.col-xs-12.col-sm-9.col-md-9.altered > div > ul > li').each(function() {
-                    let job = {};
-                    job["title"] = $(this).text();
-                    let extractedLink = $(this).find("div.list-title > a").attr("href");
-                    job["link"] = "https://www.itjobs.pt" + extractedLink;
-                    job["logo"] = $(this).find("div.responsive-container > div > a > img").attr("src");
-                    job["company"] = $(this).find("div.list-name > a").text();
-                    job["location"] = $(this).find("div.list-details").text();
-                    job["source"] = "itjobs.pt";
-                    itJobs.push(job);
-                });
-                return itJobs;
-            })
-    }
-};
+// let itJobs = function() {
+//     console.log("======================");
+//     console.log("= SCRAPING ITJOBS.PT =");
+//     console.log("======================");
+//     return function(nightmare) {
+//         nightmare
+//             .goto('https://www.itjobs.pt/emprego?location=1&q=frontend&sort=date')
+//             .wait()
+//             .evaluate(function() {
+//                 let itJobs = [];
+//                 $('div.col-xs-12.col-sm-9.col-md-9.altered > div > ul > li').each(function() {
+//                     let job = {};
+//                     job["title"] = $(this).text();
+//                     let extractedLink = $(this).find("div.list-title > a").attr("href");
+//                     job["link"] = "https://www.itjobs.pt" + extractedLink;
+//                     job["logo"] = $(this).find("div.responsive-container > div > a > img").attr("src");
+//                     job["company"] = $(this).find("div.list-name > a").text();
+//                     job["location"] = $(this).find("div.list-details").text();
+//                     job["source"] = "itjobs.pt";
+//                     itJobs.push(job);
+//                 });
+//                 return itJobs;
+//             })
+//     }
+// };
 
 // define glassdoor
 let glassdoor = function() {
@@ -99,7 +122,7 @@ let indeed = function() {
                 });
                 return indeedJobs;
             })
-            
+
     }
 };
 
@@ -147,29 +170,41 @@ let emprego = function() {
             .wait()
             .click('body > header > nav > div > div.navbar-collapse.collapse > ul.nav.navbar-nav.navbar-right > li > button')
             .wait(5000)
+            // .click('input[type="email"]')
+            .type('input#auth_user_email', 'lol')
+            .type('input#auth_user_password', 'Pro862486248')
+            .click('#login-tab > form > button')
+
+            .wait(5000)
             .screenshot('screenshot.png')
-            .click('input[name="email"]')
-            .insert('input[name="email", '']')
             .evaluate(function() {
-                let empregoJobs = [];
-                $('.pesquisaItem').each(function() {
-                    eo = {};
-                    eo["title"] = $(this).find("h3 > a > strong").text();
-                    let extractedLink = $(this).find("h3 > a").attr("href");
-                    eo["link"] = "http://www.emprego.pt" + extractedLink;
-                    eo["logo"] = $(this).find(".resultPesquisa_img > a > img").attr("src");
-                    eo["company"] = $(this).find(".subInfo > a").text();
-                    eo["location"] = 'Distrito de Aveiro';
-                    eo["date"] = $(this).find("span:nth-child(4)").text();
-                    eo["source"] = "emprego.pt";
-                    empregoJobs.push(eo);
-                });
-                return empregoJobs;
-            })
+
+                    let empregoJobs = [];
+                    $('.pesquisaItem').each(function() {
+                        eo = {};
+                        eo["title"] = $(this).find("h3 > a > strong").text();
+                        let extractedLink = $(this).find("h3 > a").attr("href");
+                        eo["link"] = "http://www.emprego.pt" + extractedLink;
+                        eo["logo"] = $(this).find(".resultPesquisa_img > a > img").attr("src");
+                        eo["company"] = $(this).find(".subInfo > a").text();
+                        eo["location"] = 'Distrito de Aveiro';
+                        eo["date"] = $(this).find("span:nth-child(4)").text();
+                        eo["source"] = "emprego.pt";
+                        empregoJobs.push(eo);
+                    });
+                    return empregoJobs;
+                },
+                function() {
+                    alert($("#auth_user_email"));
+                })
     }
 };
 
 nightmare
+    // .clearCache()
+    .use(itJobs.search())
+    .then((itJobs) => jobs.push(itJobs))
+
     /* itjobs.pt */
     // .use(itJobs())
     // .then(function(itJobs) {
@@ -189,17 +224,21 @@ nightmare
     // })
 
     /* empregosonline.pt */
-    // .then(() => nightmare.use(empregosonline())) 
+    // .then(() => nightmare.use(empregosonline()))
     // .then(function(empregosonlineJobs){
     //     jobs.push(empregosonlineJobs);
     // })
 
     /* Empregos.pt */
-    .then(() => nightmare.use(emprego()))
-    .then(function(empregoJobs) {
-        jobs.push(empregoJobs);
-    })
-    
+    // .then(() => nightmare.use(emprego()))
+    // .then(function(empregoJobs) {
+    //     jobs.push(empregoJobs);
+    // })
+
+    // .use(Linkedin.login(email, pass))
+    // .then(function() {
+    //     return nightmare.use(Linkedin.jobSearch(job, location))
+    // })
 
     .then(function(content) {
         content = JSON.stringify(jobs).replace(/\[|\]|\\n/g, " ");
@@ -209,10 +248,10 @@ nightmare
             }
             console.log("The file was saved!");
         });
-        
+
     })
     .then(() => console.log("jobs results -> ", jobs))
-    // .then(() => nightmare.end())
+    .then(() => nightmare.end())
     .catch(function(error) {
         console.log(error);
     });

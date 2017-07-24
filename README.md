@@ -10,6 +10,7 @@ Built with nightmarejs.
 - http://www.empregosonline.pt/
 
 ### Going to scrape
+- http://www.empregos.org
 - https://www.emprego.pt/
 - http://www.kellyservices.pt/
 - https://www.olx.pt/emprego/aveiro/?search%5Bdescription%5D=1

@@ -3,4 +3,4 @@ nightmare-examples
 node_modules
 jobSearchApp.sublime-project
 jobSearchApp.sublime-workspace
-credentials.js
+credentials.json
