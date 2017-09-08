@@ -5,6 +5,7 @@ Built with nightmarejs.
 
 ### Already scrapes
 - https://www.itjobs.pt
+
 - https://www.glassdoor.com
 - https://www.indeed.pt
 - http://www.empregosonline.pt/

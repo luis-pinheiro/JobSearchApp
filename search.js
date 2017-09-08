@@ -8,6 +8,7 @@ const $ = require('cheerio');
 const Linkedin = require('./plugins/linkedin.js');
 const duck = require('./plugins/duck.js');
 const itJobs = require('./plugins/itJobs');
+const glassdoor = require('./plugins/glassdoor');
 
 let jobs = [];
 
@@ -44,59 +45,32 @@ Nightmare.action('clearCache',
         this.child.call('clearCache', done);
     });
 
-// Define ItJobs function
-// let itJobs = function() {
-//     console.log("======================");
-//     console.log("= SCRAPING ITJOBS.PT =");
-//     console.log("======================");
+// define glassdoor
+// let glassdoor = function() {
+//     console.log("==========================");
+//     console.log("= SCRAPING GLASSDOOR.COM =");
+//     console.log("==========================");
 //     return function(nightmare) {
 //         nightmare
-//             .goto('https://www.itjobs.pt/emprego?location=1&q=frontend&sort=date')
+//             .goto('https://www.glassdoor.com/Job/jobs.htm?suggestCount=0&suggestChosen=true&clickSource=searchBtn&typedKeyword=front+&sc.keyword=front+end+developer&locT=C&locId=3185896&jobType=')
 //             .wait()
 //             .evaluate(function() {
-//                 let itJobs = [];
-//                 $('div.col-xs-12.col-sm-9.col-md-9.altered > div > ul > li').each(function() {
-//                     let job = {};
-//                     job["title"] = $(this).text();
-//                     let extractedLink = $(this).find("div.list-title > a").attr("href");
-//                     job["link"] = "https://www.itjobs.pt" + extractedLink;
-//                     job["logo"] = $(this).find("div.responsive-container > div > a > img").attr("src");
-//                     job["company"] = $(this).find("div.list-name > a").text();
-//                     job["location"] = $(this).find("div.list-details").text();
-//                     job["source"] = "itjobs.pt";
-//                     itJobs.push(job);
+//                 let glassJobs = [];
+//                 $('#MainCol > div > ul > li').each(function() {
+//                     gb = {};
+//                     gb["title"] = $(this).find("div > div > div > a").text();
+//                     gb["company"] = $(this).find("div > div.flexbox.empLoc > div").text();
+//                     gb["source"] = "glassdoor.com";
+//                     gb["date"] = $(this).find("div > div.flexbox.empLoc > span.showHH.nowrap > span").text();
+//                     gb["logo"] = $(this).find("div.logoWrap > a > span > img").attr("src");
+
+//                     glassJobs.push(gb);
 //                 });
-//                 return itJobs;
+//                 return glassJobs;
 //             })
+
 //     }
 // };
-
-// define glassdoor
-let glassdoor = function() {
-    console.log("==========================");
-    console.log("= SCRAPING GLASSDOOR.COM =");
-    console.log("==========================");
-    return function(nightmare) {
-        nightmare
-            .goto('https://www.glassdoor.com/Job/jobs.htm?suggestCount=0&suggestChosen=true&clickSource=searchBtn&typedKeyword=front+&sc.keyword=front+end+developer&locT=C&locId=3185896&jobType=')
-            .wait()
-            .evaluate(function() {
-                let glassJobs = [];
-                $('#MainCol > div > ul > li').each(function() {
-                    gb = {};
-                    gb["title"] = $(this).find("div > div > div > a").text();
-                    gb["company"] = $(this).find("div > div.flexbox.empLoc > div").text();
-                    gb["source"] = "glassdoor.com";
-                    gb["date"] = $(this).find("div > div.flexbox.empLoc > span.showHH.nowrap > span").text();
-                    gb["logo"] = $(this).find("div.logoWrap > a > span > img").attr("src");
-
-                    glassJobs.push(gb);
-                });
-                return glassJobs;
-            })
-
-    }
-};
 
 // define indeed.pt
 let indeed = function() {
@@ -202,20 +176,14 @@ let emprego = function() {
 
 nightmare
     // .clearCache()
+
+    /* itjobs.pt */
     .use(itJobs.search())
     .then((itJobs) => jobs.push(itJobs))
 
-    /* itjobs.pt */
-    // .use(itJobs())
-    // .then(function(itJobs) {
-    //     jobs.push(itJobs);
-    // })
-
     /* glassdoor.com */
-    // .then(() => nightmare.use(glassdoor()))
-    // .then(function(glassJobs) {
-    //     jobs.push(glassJobs);
-    // })
+    .then(() => nightmare.use(glassdoor.search()))
+    .then((glassdoor) => jobs.push(glassdoor))
 
     /* indeed.pt */
     // .then(() => nightmare.use(indeed()))
