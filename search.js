@@ -1,14 +1,16 @@
 const Nightmare = require('nightmare');
 const jquery = require('jquery');
 const fs = require('fs');
-const {
-    csvFormat
-} = require('d3-dsv');
+const {csvFormat} = require('d3-dsv');
 const $ = require('cheerio');
 const Linkedin = require('./plugins/linkedin.js');
 const duck = require('./plugins/duck.js');
 const itJobs = require('./plugins/itJobs');
 const glassdoor = require('./plugins/glassdoor');
+
+let jobsArr = [];
+let jobsArray = [];
+
 
 let jobs = [];
 
@@ -21,17 +23,19 @@ const job = cred.job;
 const location = cred.location;
 
 nightmare = Nightmare({
-    // openDevTools: {
-    //     mode: 'bottom'
-    // },
+
     show: true,
-    // pollInterval: 50, //in ms
+
+    webPreferences: {
+
+        partition: 'persist:derp'
+
+    },
+    
     alwaysOnTop: false,
     title: 'JobSearchApp',
     width: 1300,
     height: 600,
-    // loadTimeout: 5000, // in ms
-    // executionTimeout: 5000 // in ms
 });
 
 Nightmare.action('clearCache',
@@ -45,32 +49,6 @@ Nightmare.action('clearCache',
         this.child.call('clearCache', done);
     });
 
-// define glassdoor
-// let glassdoor = function() {
-//     console.log("==========================");
-//     console.log("= SCRAPING GLASSDOOR.COM =");
-//     console.log("==========================");
-//     return function(nightmare) {
-//         nightmare
-//             .goto('https://www.glassdoor.com/Job/jobs.htm?suggestCount=0&suggestChosen=true&clickSource=searchBtn&typedKeyword=front+&sc.keyword=front+end+developer&locT=C&locId=3185896&jobType=')
-//             .wait()
-//             .evaluate(function() {
-//                 let glassJobs = [];
-//                 $('#MainCol > div > ul > li').each(function() {
-//                     gb = {};
-//                     gb["title"] = $(this).find("div > div > div > a").text();
-//                     gb["company"] = $(this).find("div > div.flexbox.empLoc > div").text();
-//                     gb["source"] = "glassdoor.com";
-//                     gb["date"] = $(this).find("div > div.flexbox.empLoc > span.showHH.nowrap > span").text();
-//                     gb["logo"] = $(this).find("div.logoWrap > a > span > img").attr("src");
-
-//                     glassJobs.push(gb);
-//                 });
-//                 return glassJobs;
-//             })
-
-//     }
-// };
 
 // define indeed.pt
 let indeed = function() {
@@ -208,9 +186,20 @@ nightmare
     //     return nightmare.use(Linkedin.jobSearch(job, location))
     // })
 
+    .then((content) => {
+        return content = JSON.stringify(jobs).replace(/[[^\]]|[[\]]]/gm, " ")
+    })
+    .then((content) => {
+        return jobsArr.push(content)
+    })
+    .then((content) => {
+        return jobsArray.push(jobsArr)
+    })
+    .then((jobsArr) => {
+        return console.log("===== jobsArray -> ", jobsArray);
+    })
     .then(function(content) {
-        content = JSON.stringify(jobs).replace(/\[|\]|\\n/g, " ");
-        fs.writeFile("./jobsearch.json", content, 'utf8', function(err) {
+        fs.writeFile("./jobsearch.json", jobsArray, 'utf8', function(err) {
             if (err) {
                 return console.log(err);
             }
@@ -218,7 +207,7 @@ nightmare
         });
 
     })
-    .then(() => console.log("jobs results -> ", jobs))
+    
     .then(() => nightmare.end())
     .catch(function(error) {
         console.log(error);

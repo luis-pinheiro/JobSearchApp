@@ -1,0 +1,62 @@
+  {
+      "company": "Dellent Consulting",
+      "link": "https://www.itjobs.pt/oferta/212738/javascript-developer",
+      "location": "\n Aveiro, Porto   \n \n",
+      "logo": "https://static.itjobs.pt/images/companies/b6/283/2714/logo.png?btfc=1484791990",
+      "source": "itjobs.pt",
+      "title": "\n\n\n \n\nJavascript Developer\nDellent Consulting\n\n Aveiro, Porto   \n \n\n"
+  },
+  {
+      "company": "Dellent Consulting",
+      "link": "https://www.itjobs.pt/oferta/212077/javascript-expert",
+      "location": "\n Aveiro, Coimbra, Porto   \n \n",
+      "logo": "https://static.itjobs.pt/images/companies/b6/283/2714/logo.png?btfc=1484791990",
+      "source": "itjobs.pt",
+      "title": "\n\n\n \n\nJavascript Expert\nDellent Consulting\n\n Aveiro, Coimbra, Porto   \n \n\n"
+  },
+  {
+      "company": " M&A Digital – Aveiro",
+      "date": " 6d",
+      "source": "glassdoor.com",
+      "title": "Web Developers (ASP.NET C#)"
+  },
+  {
+      "company": " Outsoft – Aveiro",
+      "date": " 21d",
+      "source": "glassdoor.com",
+      "title": "Full Stack Web Developer"
+  },
+  {
+      "company": " Dellent Consulting – Aveiro",
+      "date": " 11d",
+      "logo": "https://media.glassdoor.com/sqls/1366174/dellent-consulting-squarelogo-1498025500538.png",
+      "source": "glassdoor.com",
+      "title": "Web Developer (C#)"
+  },
+  {
+      "company": " Dellent Consulting – Aveiro",
+      "date": " 13d",
+      "logo": "https://media.glassdoor.com/sqls/1366174/dellent-consulting-squarelogo-1498025500538.png",
+      "source": "glassdoor.com",
+      "title": "Javascript Expert"
+  },
+  {
+      "company": " Sparklegend Consultoria – Aveiro",
+      "date": " 9d",
+      "source": "glassdoor.com",
+      "title": "Full stack web developer"
+  },
+  {
+      "company": " Dellent Consulting – Aveiro",
+      "date": " 17d",
+      "logo": "",
+      "source": "glassdoor.com",
+      "title": "C#/Web Developer"
+  },
+  {
+      "company": " Dellent Consulting – Aveiro",
+      "date": " 27d",
+      "logo": "",
+      "source": "glassdoor.com",
+      "title": "Java Web Developer"
+  }

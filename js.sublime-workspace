@@ -1,0 +1,1510 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"co",
+				"console"
+			],
+			[
+				"new",
+				"newFile"
+			],
+			[
+				"read",
+				"readFile\t(populate.js)"
+			],
+			[
+				"jo",
+				"jobsearch.json\t(index.html)"
+			],
+			[
+				"get",
+				"getJSON〔function〕"
+			],
+			[
+				"mwm",
+				"mwm.png\tw:679 h:680"
+			],
+			[
+				"web",
+				"webpack.common.js\t(webpack.dev.js)"
+			],
+			[
+				"ex",
+				"exports\t(webpack.config.js)"
+			],
+			[
+				"content",
+				"contentBase\t(webpack.config.js)"
+			],
+			[
+				"dev",
+				"devServer\t(webpack.config.js)"
+			],
+			[
+				"index",
+				"index.html"
+			],
+			[
+				"in",
+				"inProduction"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"react",
+				"react-container\t(about.html)"
+			],
+			[
+				"script",
+				"script\tTag"
+			],
+			[
+				"style",
+				"style-loader!css-loader"
+			],
+			[
+				"bac",
+				"background-image\t(_variables.scss)"
+			],
+			[
+				"boo",
+				"bootstrap/"
+			],
+			[
+				"we",
+				"webpack.bootstrap.config.js"
+			],
+			[
+				"pu",
+				"publicPath"
+			],
+			[
+				"onc",
+				"onclick\tAttr"
+			],
+			[
+				"button",
+				"button-collapse\t(index.html)"
+			],
+			[
+				"butto",
+				"button-collapse\t(index.html)"
+			],
+			[
+				"va",
+				"valign-wrapper"
+			],
+			[
+				"mar",
+				"margin-left\t(_portfolio.scss)"
+			],
+			[
+				"margin",
+				"margin-bottom\t(_portfolio.scss)"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"card",
+				"card-title\t(index.html)"
+			],
+			[
+				"bo",
+				"border-radius"
+			],
+			[
+				"slide",
+				"slideLeft"
+			],
+			[
+				"col-md",
+				"col-md-6"
+			],
+			[
+				"text",
+				"text-left"
+			],
+			[
+				"nav",
+				"navbar-fixed\t(index.html)"
+			],
+			[
+				"mater",
+				"materialize/"
+			],
+			[
+				"icon",
+				"icon-menu\t(index.html)"
+			],
+			[
+				"sa",
+				"sass/"
+			],
+			[
+				"gulp",
+				"gulp-sass\t(package.json)"
+			],
+			[
+				"mat",
+				"materialize-css/"
+			],
+			[
+				"no",
+				"node_modules/"
+			],
+			[
+				"p",
+				"projects/"
+			],
+			[
+				"sc",
+				"scss/"
+			],
+			[
+				"po",
+				"postcss-flexbugs-fixes\t(package.json)"
+			],
+			[
+				"dis",
+				"displayList"
+			],
+			[
+				"nc",
+				"nc-customs.png\tw:323 h:181"
+			],
+			[
+				"list",
+				"listOfItems"
+			],
+			[
+				"brows",
+				"browserify"
+			],
+			[
+				"br",
+				"browserify"
+			],
+			[
+				"ty",
+				"type=\"password"
+			],
+			[
+				"type",
+				"type=\"email"
+			],
+			[
+				"em",
+				"empregoJobs"
+			],
+			[
+				"class",
+				"className"
+			],
+			[
+				"React",
+				"ReactDOM"
+			],
+			[
+				"sapo",
+				"sapoJobs"
+			],
+			[
+				"job",
+				"jobsearch.json\t(search.js)"
+			],
+			[
+				"n",
+				"node_modules/"
+			],
+			[
+				"gl",
+				"glassJobs"
+			],
+			[
+				"inner",
+				"innerText"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"body",
+				"bodyParser"
+			],
+			[
+				"su",
+				"summaryText"
+			],
+			[
+				"com",
+				"companyNameText"
+			],
+			[
+				"locat",
+				"locationText"
+			],
+			[
+				"lo",
+				"location"
+			],
+			[
+				"function",
+				"function〔keyword〕"
+			],
+			[
+				"console",
+				"console.log"
+			],
+			[
+				"Re",
+				"ReactDom"
+			],
+			[
+				"file",
+				"fileSys"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "populate.js",
+			"settings":
+			{
+				"buffer_size": 804,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "  {\n      \"company\": \"Dellent Consulting\",\n      \"link\": \"https://www.itjobs.pt/oferta/212738/javascript-developer\",\n      \"location\": \"\\n Aveiro, Porto   \\n \\n\",\n      \"logo\": \"https://static.itjobs.pt/images/companies/b6/283/2714/logo.png?btfc=1484791990\",\n      \"source\": \"itjobs.pt\",\n      \"title\": \"\\n\\n\\n \\n\\nJavascript Developer\\nDellent Consulting\\n\\n Aveiro, Porto   \\n \\n\\n\"\n  },\n  {\n      \"company\": \"Dellent Consulting\",\n      \"link\": \"https://www.itjobs.pt/oferta/212077/javascript-expert\",\n      \"location\": \"\\n Aveiro, Coimbra, Porto   \\n \\n\",\n      \"logo\": \"https://static.itjobs.pt/images/companies/b6/283/2714/logo.png?btfc=1484791990\",\n      \"source\": \"itjobs.pt\",\n      \"title\": \"\\n\\n\\n \\n\\nJavascript Expert\\nDellent Consulting\\n\\n Aveiro, Coimbra, Porto   \\n \\n\\n\"\n  },\n  {\n      \"company\": \" M&A Digital – Aveiro\",\n      \"date\": \" 6d\",\n      \"source\": \"glassdoor.com\",\n      \"title\": \"Web Developers (ASP.NET C#)\"\n  },\n  {\n      \"company\": \" Outsoft – Aveiro\",\n      \"date\": \" 21d\",\n      \"source\": \"glassdoor.com\",\n      \"title\": \"Full Stack Web Developer\"\n  },\n  {\n      \"company\": \" Dellent Consulting – Aveiro\",\n      \"date\": \" 11d\",\n      \"logo\": \"https://media.glassdoor.com/sqls/1366174/dellent-consulting-squarelogo-1498025500538.png\",\n      \"source\": \"glassdoor.com\",\n      \"title\": \"Web Developer (C#)\"\n  },\n  {\n      \"company\": \" Dellent Consulting – Aveiro\",\n      \"date\": \" 13d\",\n      \"logo\": \"https://media.glassdoor.com/sqls/1366174/dellent-consulting-squarelogo-1498025500538.png\",\n      \"source\": \"glassdoor.com\",\n      \"title\": \"Javascript Expert\"\n  },\n  {\n      \"company\": \" Sparklegend Consultoria – Aveiro\",\n      \"date\": \" 9d\",\n      \"source\": \"glassdoor.com\",\n      \"title\": \"Full stack web developer\"\n  },\n  {\n      \"company\": \" Dellent Consulting – Aveiro\",\n      \"date\": \" 17d\",\n      \"logo\": \"\",\n      \"source\": \"glassdoor.com\",\n      \"title\": \"C#/Web Developer\"\n  },\n  {\n      \"company\": \" Dellent Consulting – Aveiro\",\n      \"date\": \" 27d\",\n      \"logo\": \"\",\n      \"source\": \"glassdoor.com\",\n      \"title\": \"Java Web Developer\"\n  }",
+			"file": "jobsearch.json",
+			"file_size": 1719,
+			"file_write_time": 131493637750090487,
+			"settings":
+			{
+				"buffer_size": 2084,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "jobs.html",
+			"settings":
+			{
+				"buffer_size": 1935,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 1042,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "json2html.test.js",
+			"settings":
+			{
+				"buffer_size": 298,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "modify.js",
+			"settings":
+			{
+				"buffer_size": 445,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 376.0,
+		"last_filter": "i",
+		"selected_items":
+		[
+			[
+				"i",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"extend",
+				"ExtendScript: Build for Photoshop"
+			],
+			[
+				"exte",
+				"ExtendScript: Build for Photoshop"
+			],
+			[
+				"html",
+				"Snippet: html"
+			],
+			[
+				"form",
+				"Format: Javascript"
+			],
+			[
+				"setti user",
+				"Preferences: Package Control Settings – User"
+			]
+		],
+		"width": 544.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/profi/Documents/_webdev/JobSearchApp",
+		"/C/Users/profi/Documents/_webdev/JobSearchApp/node_modules/jquery/dist"
+	],
+	"file_history":
+	[
+		"/C/Users/profi/Documents/_webdev/JobSearchApp/jobs.html",
+		"/C/Users/profi/Documents/_webdev/JobSearchApp/jobs.json",
+		"/C/Users/profi/Documents/_webdev/JobSearchApp/jobsearch.txt",
+		"/C/Users/profi/Documents/_webdev/JobSearchApp/jobsearch.json",
+		"/C/Users/profi/Documents/_webdev/JobSearchApp/populate.js",
+		"/C/Users/profi/Documents/_webdev/JobSearchApp/index.js",
+		"/C/Users/profi/Documents/_webdev/JobSearchApp/search.js",
+		"/C/Users/profi/Documents/_webdev/JobSearchApp/index.html",
+		"/C/Users/profi/Documents/_webdev/JobSearchApp2/.gitignore",
+		"/C/Users/profi/AppData/Roaming/Convivea/Bit_Che/3/scripts/default/torrentfunk.com.ini",
+		"/C/Users/profi/AppData/Roaming/Convivea/Bit_Che/3/scripts/default/torrentdownload.co.ini",
+		"/C/Users/profi/AppData/Roaming/Convivea/Bit_Che/3/scripts/default/torrent.cd.ini",
+		"/C/Users/profi/AppData/Roaming/Convivea/Bit_Che/3/scripts/default/torlock.com.ini",
+		"/C/Users/profi/AppData/Roaming/Convivea/Bit_Che/3/scripts/default/seedpeer.me.ini",
+		"/C/Users/profi/AppData/Roaming/Convivea/Bit_Che/3/scripts/default/Rutor.org.ini",
+		"/C/Users/profi/AppData/Roaming/Convivea/Bit_Che/3/scripts/default/piratebay.ini",
+		"/C/Users/profi/AppData/Roaming/Convivea/Bit_Che/3/scripts/default/rarbg.com.ini",
+		"/C/Users/profi/AppData/Roaming/Convivea/Bit_Che/3/scripts/default/NyaaTorrents.ini",
+		"/C/Users/profi/AppData/Roaming/Convivea/Bit_Che/3/scripts/default/limetorrents.com.ini",
+		"/C/Users/profi/AppData/Roaming/Convivea/Bit_Che/3/scripts/default/isohunt.ini",
+		"/C/Users/profi/AppData/Roaming/Convivea/Bit_Che/3/scripts/default/ilcorsaronero.info.ini",
+		"/C/Users/profi/AppData/Roaming/Convivea/Bit_Che/3/scripts/default/eztv.ini",
+		"/C/Users/profi/AppData/Roaming/Convivea/Bit_Che/3/scripts/default/TorrentZap.ini",
+		"/C/Users/profi/AppData/Roaming/Convivea/Bit_Che/3/scripts/default/tntvillage.scambioetico.ini",
+		"/C/Users/profi/AppData/Roaming/Convivea/Bit_Che/3/scripts/default/sumotorrent.ini",
+		"/C/Users/profi/AppData/Roaming/Convivea/Bit_Che/3/scripts/default/publichd.se.ini",
+		"/C/Users/profi/AppData/Roaming/Convivea/Bit_Che/3/scripts/default/btmon.ini",
+		"/C/Users/profi/AppData/Roaming/Convivea/Bit_Che/3/scripts/default/1337x.org.ini",
+		"/C/Users/profi/AppData/Roaming/Convivea/Bit_Che/3/scripts/default/bittorrent.am.ini",
+		"/C/Users/profi/Desktop/scratchpad.js",
+		"/C/Users/profi/.svp/Free Brazzers FakeTaxi PornHub Realitykings Backdo",
+		"/C/Users/profi/Desktop/brz.user.js",
+		"/C/Users/profi/Desktop/idm.txt",
+		"/C/Users/profi/Documents/Mega/_BackUp/Firefox/FEBE 2017 09-07 22.39.31/historyFx55.0.3(FEBE8.9.3.1){default}.json",
+		"/C/Users/profi/Documents/Mega/_BackUp/Firefox/FEBE 2017 09-07 21.24.21/profileFx55.0.3(FEBE8.9.3.1){default}.fbu",
+		"/C/Users/profi/Documents/Mega/_apps/Launchy/_web_shortcuts/Add-ons for Firefox.URL",
+		"/C/Users/profi/Desktop/engines/leetx.py",
+		"/C/Users/profi/Desktop/engines/zooqle.py",
+		"/C/Users/profi/Desktop/engines/torrentz.py",
+		"/C/Users/profi/Desktop/engines/torrentproject.py",
+		"/C/Users/profi/Desktop/engines/torrent9.py",
+		"/C/Users/profi/Desktop/engines/torlock.py",
+		"/C/Users/profi/Desktop/engines/tntvillage.py",
+		"/C/Users/profi/Desktop/engines/thebay.py",
+		"/C/Users/profi/Desktop/engines/sumotorrent.py",
+		"/C/Users/profi/Desktop/engines/sukebei.py",
+		"/C/Users/profi/Desktop/engines/skytorrents.py",
+		"/C/Users/profi/Desktop/engines/rarbg.py",
+		"/C/Users/profi/Desktop/engines/psychocydd.py",
+		"/C/Users/profi/Desktop/engines/piratebay.py",
+		"/C/Users/profi/Desktop/engines/pantsu.py",
+		"/C/Users/profi/Desktop/engines/nyaasi.py",
+		"/C/Users/profi/Desktop/engines/nyaapantsu.py",
+		"/C/Users/profi/Desktop/engines/nyaa.py",
+		"/C/Users/profi/Desktop/engines/linuxtracker.py",
+		"/C/Users/profi/Desktop/engines/limetorrents.py",
+		"/C/Users/profi/Desktop/engines/legittorrents.py",
+		"/C/Users/profi/Desktop/engines/ilcorsaronero.py",
+		"/C/Users/profi/Desktop/engines/divxtotal.py",
+		"/C/Users/profi/Desktop/engines/demonoid.py",
+		"/C/Users/profi/Desktop/engines/cpasbien.py",
+		"/C/Users/profi/Desktop/engines/btetree.py",
+		"/C/Users/profi/Desktop/engines/btdb.py",
+		"/C/Users/profi/Documents/_webdev/ChromeExtension/lol/lol.txt",
+		"/C/Users/profi/AppData/Roaming/qBittorrent/qBittorrent-rss.ini",
+		"/C/Users/profi/AppData/Roaming/qBittorrent/qBittorrent-data.ini",
+		"/C/Users/profi/AppData/Roaming/qBittorrent/qBittorrent.ini",
+		"/C/Users/profi/AppData/Roaming/qBittorrent/rss/feeds.json",
+		"/C/Users/profi/Documents/Mega/Music/mp3/_split/_splitter/_01.20.00_mp3.bat",
+		"/C/Users/profi/Documents/Mega/Music/mp3/_split/_splitter/_00.40.00_mp3.bat",
+		"/C/Users/profi/Documents/Mega/Music/mp3/_split/_splitter/_00.20.00_mp3.bat",
+		"/C/Users/profi/Documents/Mega/Music/mp3/_split/_splitter/_00.10.00_mp3.bat",
+		"/C/Users/profi/Documents/Mega/Music/mp3/_split/_splitter/_00.05.00_mp3.bat",
+		"/C/Users/profi/Videos/NodeTube/_convert-to-mp3.bat",
+		"/C/Users/profi/Documents/_webdev/portfolio-webpack/webpack.prod.js",
+		"/C/Users/profi/Documents/_webdev/portfolio-webpack/webpack.common.js",
+		"/C/Users/profi/Documents/_webdev/portfolio-webpack/package.json",
+		"/C/Users/profi/Documents/_webdev/portfolio-webpack/src/js/main.js",
+		"/C/Users/profi/Videos/NodeTube/ConvertTo-mp3mp4/_test/_convert-to-mp3.bat",
+		"/C/Users/profi/Videos/NodeTube/ConvertTo-mp3mp4/_test/[Best & Popular] Hardstyle Songs 2017 ♦ World of Hardstyle 2017 ♦ Hardstyle Mix - YouTube.MP4",
+		"/C/Users/profi/Videos/NodeTube/ConvertTo-mp3mp4/_convert-to-mp3.bat",
+		"/C/Users/profi/Documents/_webdev/portfolio-webpack/webpack.dev.js",
+		"/C/Users/profi/Documents/_webdev/portfolio-webpack/webpack.config.js",
+		"/C/Users/profi/Documents/_webdev/portfolio-webpack/node_modules/materialize-css/sass/components/_variables.scss",
+		"/C/Users/profi/Documents/_webdev/portfolio-webpack/src/scss/materialize/_colors.scss",
+		"/C/Users/profi/Documents/_webdev/portfolio-webpack/src/scss/materialize/_materialize.scss",
+		"/C/Users/profi/Documents/_webdev/portfolio-webpack/src/scss/now-ui/now-ui-kit.scss",
+		"/C/Users/profi/Documents/_webdev/portfolio-webpack/src/scss/style.scss",
+		"/C/Users/profi/Documents/_webdev/portfolio-webpack/src/font/profitcreationsgithub/variables.scss",
+		"/C/Users/profi/Documents/_webdev/portfolio-webpack/gulpfile.js",
+		"/C/Users/profi/Documents/_webdev/portfolio-webpack/README.md",
+		"/C/Users/profi/Documents/_webdev/_learning_projects/webpack-learning/src/main.js",
+		"/C/Users/profi/Documents/_webdev/_learning_projects/webpack-learning/package.json",
+		"/C/Users/profi/Documents/_webdev/_learning_projects/webpack-learning/dist/style.css",
+		"/C/Users/profi/Documents/_webdev/_learning_projects/webpack-learning/webpack.config.js",
+		"/C/Users/profi/Documents/_webdev/_learning_projects/webpack-learning/src/main.scss",
+		"/C/Users/profi/Documents/_webdev/_learning_projects/webpack-learning/dist/bundle.js",
+		"/C/Users/profi/Documents/_webdev/_learning_projects/webpack-learning/.babelrc",
+		"/C/Users/profi/Documents/_webdev/_learning_projects/webpack-learning/src/Notification.js",
+		"/C/Users/profi/Documents/_webdev/_learning_projects/webpack-learning/src/main.css",
+		"/C/Users/profi/Documents/_webdev/_learning_projects/webpack-learning/index.html",
+		"/C/Users/profi/Desktop/downloads/_Gedownload/(Electro House, Progressive House) VA - David Guetta June 2014 Top 10 (2014) MP3, 320 Kbps [EDM RG]/00. David Guetta - June 2014 Top 10.m3u",
+		"/C/Users/profi/Documents/_webdev/_learning_projects/LyndaLearnWebPackTheBasics/webpack.config.js",
+		"/C/Users/profi/Documents/_webdev/_learning_projects/LyndaLearnWebPackTheBasics/src/main.js",
+		"/C/Users/profi/Documents/_webdev/_learning_projects/LyndaLearnWebPackTheBasics/src/style.scss",
+		"/C/Users/profi/Documents/_webdev/_learning_projects/LyndaLearnWebPackTheBasics/disableUAC.reg",
+		"/C/Users/profi/Documents/_webdev/_learning_projects/LyndaLearnWebPackTheBasics/index.html",
+		"/C/Users/profi/Documents/_webdev/_learning_projects/LyndaLearnWebPackTheBasics/main.coffee",
+		"/C/Users/profi/Documents/_webdev/_learning_projects/LyndaLearnWebPackTheBasics/.babelrc",
+		"/C/Users/profi/Documents/_webdev/_learning_projects/LyndaLearnWebPackTheBasics/message.coffee",
+		"/C/Users/profi/Documents/_webdev/_learning_projects/LyndaLearnWebPackTheBasics/package.json",
+		"/C/Users/profi/Documents/_webdev/_learning_projects/LyndaLearnWebPackTheBasics/info.txt",
+		"/C/Users/profi/Documents/_webdev/ProfitCreations.github.io/src/scss/resume/_base.scss",
+		"/C/Users/profi/Documents/_webdev/ProfitCreations.github.io/src/scss/resume/sidebar/_profile.scss",
+		"/C/Users/profi/Documents/_webdev/ProfitCreations.github.io/resume.html",
+		"/C/Users/profi/Documents/_webdev/ProfitCreations.github.io/src/scss/resume.scss",
+		"/C/Users/profi/Documents/_webdev/ProfitCreations.github.io/src/scss/style.scss",
+		"/C/Users/profi/Documents/_webdev/ProfitCreations.github.io/src/scss/resume/_resume.scss",
+		"/C/Users/profi/Documents/_webdev/ProfitCreations.github.io/src/img/paper-2.png",
+		"/C/Users/profi/Documents/_webdev/ProfitCreations.github.io/gulpfile.js",
+		"/C/Users/profi/Documents/_webdev/ProfitCreations.github.io/package.json",
+		"/C/Users/profi/Documents/_webdev/ProfitCreations.github.io/src/scss/resume/wrapper/_experiences.scss",
+		"/C/Users/profi/Documents/_webdev/ProfitCreations.github.io/dist/css/resume.css",
+		"/C/Users/profi/Documents/_webdev/ProfitCreations.github.io/yarn.lock",
+		"/C/Users/profi/Documents/_webdev/_learning_projects/ihatetomatoes/dev/webpack101/webpack.bootstrap.config.js",
+		"/C/Users/profi/Documents/_webdev/puppeteer/test.js",
+		"/C/Users/profi/Documents/_webdev/_learning_projects/ihatetomatoes/dev/webpack101/.bootstraprc",
+		"/C/Users/profi/Documents/_webdev/_learning_projects/ihatetomatoes/dev/webpack101/webpack.config.js"
+	],
+	"find":
+	{
+		"height": 55.0
+	},
+	"find_in_files":
+	{
+		"height": 104.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"h3",
+			"var",
+			"\\",
+			"http://tropinha-34.appspot.com/www.",
+			"https://piratenproxy.nl/",
+			"http://piratenproxy.nl/",
+			"http://piratenpartij.nl/",
+			"http://proxy.piratenpartij.nl",
+			"\\",
+			"#VERSION: 1. ",
+			"#VERSION:",
+			")",
+			"\\",
+			"mp3",
+			" piratebay",
+			"piratebay",
+			"red",
+			"commons",
+			"About",
+			"magnet",
+			"30px",
+			"content-center",
+			"sm",
+			"false",
+			".tech",
+			".icon",
+			"gulp",
+			"true",
+			" + q",
+			"”",
+			"“",
+			"md",
+			"class=\"col-md-4 wow fadeIn\">",
+			"card-title activator grey-text text-darken-4",
+			"card-title grey-text text-darken-4",
+			"grey-text text-darken-4",
+			"<span class=\"card-title grey-text text-darken-4",
+			"p>",
+			"p",
+			";",
+			"        ",
+			"<li>",
+			"Resume",
+			"</a>",
+			"<a",
+			"lead",
+			"button",
+			">\n",
+			"Vastgoedjunior",
+			"vastgoedjunior",
+			"Vastgoedjunior",
+			"TrendyTV",
+			"trendytv",
+			"TrendyTV",
+			"ProfitCreations",
+			"NC-Customs",
+			"nc-customs",
+			"NC-Customs",
+			"Latuta",
+			"latuta",
+			"Latuta",
+			"Random Quotes",
+			"Javascript Calculator",
+			"Simon Game",
+			"col-sm-4",
+			"Mobile",
+			"Javascript",
+			"Components",
+			"Sass",
+			"components",
+			".scss",
+			"scss",
+			"\\",
+			"#3c4f74",
+			" class=\"\"",
+			"ist-group-item ",
+			"text-center",
+			"$.",
+			"del",
+			"TrendyTV",
+			"profit",
+			"Pomodoro",
+			"Calculator",
+			"Simon",
+			"TicTacToe",
+			"Twitchtv",
+			"//",
+			"1",
+			"react",
+			"'",
+			"\"",
+			"\",",
+			",",
+			"]",
+			"[",
+			"$(\"",
+			"#auth_user_email",
+			"\"#auth_user_email\"",
+			"cheerio",
+			"input[type='password",
+			"input[type='email']",
+			"'input[type=\"email\"]'",
+			"input#auth_user_email.form-control",
+			"insert",
+			"input[name=\"password",
+			"input[name=\"email",
+			"'",
+			",",
+			"{",
+			"\t\t",
+			"=======",
+			"empregosonline",
+			"Empregosonline",
+			"empregosonline",
+			"EMPREGOSONLINE",
+			"empregosonline",
+			"Empregosonline",
+			"\\",
+			"orange",
+			"job",
+			"sapo",
+			"table > tbody > tr >",
+			"div.tableList > ",
+			"indeedJobs",
+			"ind",
+			"content",
+			"Source",
+			"Logo"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"http://tropinha-34.appspot.com/",
+			"#VERSION: 1."
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "populate.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 804,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								579,
+								579
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										692,
+										693
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										547,
+										548
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "jobsearch.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2084,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_complete": true,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "jobs.html",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1935,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										322,
+										324
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/tag.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										1,
+										3
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1042,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								972,
+								972
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+									"1":
+									[
+										966,
+										969
+									]
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 273.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "json2html.test.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 298,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								298,
+								298
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "modify.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 445,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								344,
+								412
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										413,
+										414
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										181,
+										182
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"default_dir": "C:\\Users\\profi\\Documents\\_webdev\\JobSearchApp",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 21.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.660635481024,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "js.sublime-project",
+	"replace":
+	{
+		"height": 38.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 156.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
