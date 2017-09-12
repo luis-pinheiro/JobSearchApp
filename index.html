@@ -1,61 +1,109 @@
 <!DOCTYPE html>
-<html>
-  
+<html lang="en">
+
 <head>
-  <script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
-  <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
-  <script src="https://npmcdn.com/react-router@3.0.2/umd/ReactRouter.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
 
-  
-  <style>
-  
-  </style>
+    <title>Dashboard Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/custom.css" rel="stylesheet">
 </head>
-  
+
 <body>
-  
-  <div id="container">
-  
-  </div>
-  
-  <script type="text/babel">
-    var destination = document.querySelector("#container");
-  
 
-    var App = React.createClass({
-      render: function() {
-        return (
-          <div>
-            <h1>Simple SPA</h1>
-            <ul className="header">
-              <li>Home</li>
-              <li>Stuff</li>
-              <li>Contact</li>
-            </ul>
-            <div className="content">
-     
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Dashboard</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <div class="row justify-content-center">
+                <div class="row justify-content-center">
+                    <div class="col">
+                        <input id="jobTitle" type="text" class="form-control" placeholder="Job Title">
+                    </div>
+                    <div class="col">
+                        <input id="city" type="text" class="form-control" placeholder="City">
+                    </div>
+                    <div class="btn-group col" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                          <input type="radio" name="options" id="option2" autocomplete="off"> Radio 2
+                        </label>
+                        <label class="btn btn-secondary">
+                          <input type="radio" name="options" id="option3" autocomplete="off"> Radio 3
+                        </label>
+                    </div>
+                    <button id="searchJob" class="btn btn-outline-success my-2 my-sm-0 col">Search</button>
+                </div>
             </div>
-          </div>
-        )
-      }
-    });
+
+        </div>
+    </nav>
 
 
-    ReactDOM.render(
-     
-      <ReactRouter.Router history={ReactRouter.hasHistory}>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-sm-4 col-md-4 d-none d-sm-block bg-light sidebar">
+                <ul id="results" class="nav nav-pills flex-column">
 
-        <ReactRouter.Route path="/" component={App}>
+                </ul>
 
-        </ReactRouter.Route>
-        
-      </ReactRouter.Router>,
 
-      destination
-    );
-    
-  </script>
+            </nav>
+
+            <main class="col-sm-9 ml-sm-auto col-md-10 pt-3" role="main">
+                <b id="status">idle</b>
+
+
+
+
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // We allow nightmare to wander in the global scope by defining it here, 
+        // otherwise we would not be able to call it multiple times
+        /*
+        var Nightmare = require('nightmare');
+        var nightmare;
+        var args = {
+            show: true,
+            alwaysOnTop: true,
+            electronPath: require('./node_modules/electron')
+        };
+        */
+
+
+        document.getElementById("searchJob").addEventListener("click", function() {
+            document.getElementById("status").innerHTML = "Searching for jobs";
+
+            require('./search')
+
+
+        })
+    </script>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')
+    </script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script> -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!-- <script src="../../../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
 </body>
-  
+
 </html>

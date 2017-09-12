@@ -1,0 +1,44 @@
+body{
+    padding-top: 50px;
+}
+
+nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark {
+    padding: 5px;
+}
+
+.bg-light {
+  background-color: #eee !important;
+  padding: 0px;
+}
+.bg-light li {
+  border-bottom: 1px solid #999;
+  padding: 0px 15px;
+}
+.bg-light li:hover {
+  background-color: #ddd;
+}
+.bg-light li a {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  color: #000;
+  text-decoration: none;
+}
+.bg-light li a img {
+  float: right;
+  max-width: 100px;
+}
+bg-light li a h6 {
+    font-size: 14px;
+}
+.bg-light li a p {
+  margin: 2px 2px;
+    font-size: 11px;
+    float: left;
+    padding: 2px 4px;
+    background-color: #ddd;
+    border-radius: 5px;
+}
+.bg-light li a p.fr {
+  float: right;
+}

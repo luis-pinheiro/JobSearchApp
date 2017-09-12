@@ -7,10 +7,12 @@ const Linkedin = require('./plugins/linkedin.js');
 const duck = require('./plugins/duck.js');
 const itJobs = require('./plugins/itJobs');
 const glassdoor = require('./plugins/glassdoor');
+const modify = require('./helpers/modify.js');
+// const log = require('./helpers/log.js');
+// const populate = require('./helpers/populate.js');
 
 let jobsArr = [];
 let jobsArray = [];
-
 
 let jobs = [];
 
@@ -23,20 +25,19 @@ const job = cred.job;
 const location = cred.location;
 
 nightmare = Nightmare({
-
     show: true,
-
     webPreferences: {
-
         partition: 'persist:derp'
-
     },
-    
+    electronPath: require('./node_modules/electron'),
     alwaysOnTop: false,
     title: 'JobSearchApp',
     width: 1300,
     height: 600,
 });
+
+
+
 
 Nightmare.action('clearCache',
     function(name, options, parent, win, renderer, done) {
@@ -153,62 +154,18 @@ let emprego = function() {
 };
 
 nightmare
-    // .clearCache()
-
-    /* itjobs.pt */
     .use(itJobs.search())
     .then((itJobs) => jobs.push(itJobs))
-
     /* glassdoor.com */
     .then(() => nightmare.use(glassdoor.search()))
     .then((glassdoor) => jobs.push(glassdoor))
+    .then(() => modify.modify(jobs))
 
-    /* indeed.pt */
-    // .then(() => nightmare.use(indeed()))
-    // .then(function(indeedJobs) {
-    //     jobs.push(indeedJobs);
-    // })
-
-    /* empregosonline.pt */
-    // .then(() => nightmare.use(empregosonline()))
-    // .then(function(empregosonlineJobs){
-    //     jobs.push(empregosonlineJobs);
-    // })
-
-    /* Empregos.pt */
-    // .then(() => nightmare.use(emprego()))
-    // .then(function(empregoJobs) {
-    //     jobs.push(empregoJobs);
-    // })
-
-    // .use(Linkedin.login(email, pass))
-    // .then(function() {
-    //     return nightmare.use(Linkedin.jobSearch(job, location))
-    // })
-
-    .then((content) => {
-        return content = JSON.stringify(jobs).replace(/[[^\]]|[[\]]]/gm, " ")
+    .then(function (jobs) {
+        document.getElementById("results").innerHTML = jobs;
     })
-    .then((content) => {
-        return jobsArr.push(content)
-    })
-    .then((content) => {
-        return jobsArray.push(jobsArr)
-    })
-    .then((jobsArr) => {
-        return console.log("===== jobsArray -> ", jobsArray);
-    })
-    .then(function(content) {
-        fs.writeFile("./jobsearch.json", jobsArray, 'utf8', function(err) {
-            if (err) {
-                return console.log(err);
-            }
-            console.log("The file was saved!");
-        });
-
-    })
-    
     .then(() => nightmare.end())
     .catch(function(error) {
         console.log(error);
     });
+

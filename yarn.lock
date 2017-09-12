@@ -73,6 +73,10 @@ boom@2.x.x:
   dependencies:
     hoek "2.x.x"
 
+bootstrap@4.0.0-beta:
+  version "4.0.0-beta"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.0.0-beta.tgz#dc5928175d2e71310bc668cf9e05a907211b72a6"
+
 brace-expansion@^1.1.7:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.8.tgz#c07b211c7c952ec1f8efd51a77ef0d1d3990a292"
@@ -820,6 +824,13 @@ ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
 
+nightmare-window-manager@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/nightmare-window-manager/-/nightmare-window-manager-0.2.2.tgz#8ee9052f8a2351a8bddb6db492785d4e23db0ee8"
+  dependencies:
+    debug "^2.2.0"
+    sliced "^1.0.1"
+
 nightmare@^2.9.1:
   version "2.10.0"
   resolved "https://registry.yarnpkg.com/nightmare/-/nightmare-2.10.0.tgz#e9c5d590bb296f59685fd48218c2fbac44767b21"
@@ -1090,7 +1101,7 @@ sliced@0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/sliced/-/sliced-0.0.5.tgz#5edc044ca4eb6f7816d50ba2fc63e25d8fe4707f"
 
-sliced@1.0.1:
+sliced@1.0.1, sliced@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/sliced/-/sliced-1.0.1.tgz#0b3a662b5d04c3177b1926bea82b03f837a2ef41"
 
