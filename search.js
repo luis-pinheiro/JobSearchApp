@@ -8,21 +8,18 @@ const duck = require('./plugins/duck.js');
 const itJobs = require('./plugins/itJobs');
 const glassdoor = require('./plugins/glassdoor');
 const modify = require('./helpers/modify.js');
-// const log = require('./helpers/log.js');
-// const populate = require('./helpers/populate.js');
-
 let jobsArr = [];
 let jobsArray = [];
 
 let jobs = [];
 
 const cred = require('./credentials.json');
-console.log("cred -> ", cred.user);
+
+console.log('global -> ', global.id);
 
 const email = cred.user;
 const pass = cred.pass;
 const job = cred.job;
-const location = cred.location;
 
 nightmare = Nightmare({
     show: true,
@@ -36,9 +33,6 @@ nightmare = Nightmare({
     height: 600,
 });
 
-
-
-
 Nightmare.action('clearCache',
     function(name, options, parent, win, renderer, done) {
         parent.respondTo('clearCache', function(done) {
@@ -49,8 +43,6 @@ Nightmare.action('clearCache',
     function(message, done) {
         this.child.call('clearCache', done);
     });
-
-
 // define indeed.pt
 let indeed = function() {
     console.log("======================");
@@ -157,14 +149,17 @@ nightmare
     .use(itJobs.search())
     .then((itJobs) => jobs.push(itJobs))
     /* glassdoor.com */
+    /*
     .then(() => nightmare.use(glassdoor.search()))
     .then((glassdoor) => jobs.push(glassdoor))
+    */
     .then(() => modify.modify(jobs))
 
     .then(function (jobs) {
         document.getElementById("results").innerHTML = jobs;
+        document.getElementById("status").innerHTML = "";
     })
-    .then(() => nightmare.end())
+    // .then(() => nightmare.end())
     .catch(function(error) {
         console.log(error);
     });

@@ -1,0 +1,77 @@
+.hidden{
+    visibility: hidden;
+    display: none !important;
+}
+body {
+    margin-top: 50px;
+    nav.navbar {
+        background: #fff;
+        margin: 0 auto;
+        padding: 12px 0;
+        width: 100%;
+        box-shadow: 0 1px 1px 1px rgba(127, 127, 127, 0.3);
+
+        .custom-select,
+        #city,
+        #jobTitle {
+            border: 1px solid #999;
+            border-radius: 2px;
+            box-shadow: none;
+            color: #404040;
+            font-size: 16px; // height: 100%;
+            margin-right: 16px;
+            outline: none; // padding: 0 12px;
+        }
+
+
+        #searchJob {
+            background-color: #0CAA41;
+            border: 0;
+            border-radius: 2px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px; // height: 100%;
+            outline: none; // padding: 0 24px;
+            overflow: hidden;
+        }
+    }
+    nav.sidebar {
+        // padding-top: 64px;
+        position: fixed; // width: 477px;
+        overflow-y: scroll;
+        top: 64px;
+        bottom: 0;
+
+        #results>li {
+            background-color: #fbfbfb;
+            border-top: 1px solid #c2c2c2;
+            padding: 15px 0px;
+
+            img {
+                line-height: 1em;
+                display: block; // height: 42px;
+                border: 1px solid #c2c2c2;
+                padding: 0;
+                border: none;
+                position: relative;
+                display: inline-block;
+                padding: 2px;
+                background: white none;
+                border: 1px solid #dedede;
+                line-height: 0;
+                // height: 40px;
+                vertical-align: baseline;
+                float: right;
+                max-width: 100px;
+            }
+            p,
+            h6 {
+                display: block;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin-bottom: 0px !important;
+            }
+        }
+    }
+}

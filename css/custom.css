@@ -1,44 +1,62 @@
-body{
-    padding-top: 50px;
-}
+.hidden {
+  visibility: hidden;
+  display: none !important; }
 
-nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark {
-    padding: 5px;
-}
-
-.bg-light {
-  background-color: #eee !important;
-  padding: 0px;
-}
-.bg-light li {
-  border-bottom: 1px solid #999;
-  padding: 0px 15px;
-}
-.bg-light li:hover {
-  background-color: #ddd;
-}
-.bg-light li a {
-  display: block;
-  width: 100%;
-  padding: 10px 0;
-  color: #000;
-  text-decoration: none;
-}
-.bg-light li a img {
-  float: right;
-  max-width: 100px;
-}
-bg-light li a h6 {
-    font-size: 14px;
-}
-.bg-light li a p {
-  margin: 2px 2px;
-    font-size: 11px;
-    float: left;
-    padding: 2px 4px;
-    background-color: #ddd;
-    border-radius: 5px;
-}
-.bg-light li a p.fr {
-  float: right;
-}
+body {
+  margin-top: 50px; }
+  body nav.navbar {
+    background: #fff;
+    margin: 0 auto;
+    padding: 12px 0;
+    width: 100%;
+    box-shadow: 0 1px 1px 1px rgba(127, 127, 127, 0.3); }
+    body nav.navbar .custom-select,
+    body nav.navbar #city,
+    body nav.navbar #jobTitle {
+      border: 1px solid #999;
+      border-radius: 2px;
+      box-shadow: none;
+      color: #404040;
+      font-size: 16px;
+      margin-right: 16px;
+      outline: none; }
+    body nav.navbar #searchJob {
+      background-color: #0CAA41;
+      border: 0;
+      border-radius: 2px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+      outline: none;
+      overflow: hidden; }
+  body nav.sidebar {
+    position: fixed;
+    overflow-y: scroll;
+    top: 64px;
+    bottom: 0; }
+    body nav.sidebar #results > li {
+      background-color: #fbfbfb;
+      border-top: 1px solid #c2c2c2;
+      padding: 15px 0px; }
+      body nav.sidebar #results > li img {
+        line-height: 1em;
+        display: block;
+        border: 1px solid #c2c2c2;
+        padding: 0;
+        border: none;
+        position: relative;
+        display: inline-block;
+        padding: 2px;
+        background: white none;
+        border: 1px solid #dedede;
+        line-height: 0;
+        vertical-align: baseline;
+        float: right;
+        max-width: 100px; }
+      body nav.sidebar #results > li p,
+      body nav.sidebar #results > li h6 {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 0px !important; }

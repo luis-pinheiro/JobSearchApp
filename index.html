@@ -7,103 +7,89 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
-
     <title>Dashboard Template for Bootstrap</title>
-
     <!-- Bootstrap core CSS -->
     <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Custom styles for this template -->
     <link href="css/custom.css" rel="stylesheet">
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
 </head>
 
 <body>
-
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="#">Dashboard</a>
-        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-            <div class="row justify-content-center">
-                <div class="row justify-content-center">
-                    <div class="col">
-                        <input id="jobTitle" type="text" class="form-control" placeholder="Job Title">
-                    </div>
-                    <div class="col">
-                        <input id="city" type="text" class="form-control" placeholder="City">
-                    </div>
-                    <div class="btn-group col" data-toggle="buttons">
-                        <label class="btn btn-secondary">
-                          <input type="radio" name="options" id="option2" autocomplete="off"> Radio 2
-                        </label>
-                        <label class="btn btn-secondary">
-                          <input type="radio" name="options" id="option3" autocomplete="off"> Radio 3
-                        </label>
-                    </div>
+    <nav class="navbar navbar-expand-lg fixed-top ">
+        <div class="container">
+            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo02">
+                <div class="form-inline my-2 my-lg-0">
+                    <input id="jobTitle" type="text" class="form-control" placeholder="Job Title">
+                    <!-- <input id="city" type="text" class="form-control" placeholder="City"> -->
+                    <select id="locations" class="custom-select">
+                        <option value="2">Açores</option>
+                        <option value="1">Aveiro</option>
+                        <option value="3">Beja</option>
+                        <option value="4">Braga</option>
+                        <option value="5">Bragança</option>
+                        <option value="6">Castelo Branco</option>
+                        <option value="8">Coimbra</option>
+                        <option value="10">Évora</option>
+                        <option value="9">Faro</option>
+                        <option value="11">Guarda</option>
+                        <option value="29">Internacional</option>
+                        <option value="13">Leiria</option>
+                        <option value="14">Lisboa</option>
+                        <option value="15">Madeira</option>
+                        <option value="12">Portalegre</option>
+                        <option value="18">Porto</option>
+                        <option value="20">Santarém</option>
+                        <option value="17">Setúbal</option>
+                        <option value="22">Viana do Castelo</option>
+                        <option value="21">Vila Real</option>
+                        <option value="16">Viseu</option>
+                    </select>
+                    <select class="custom-select">
+                        <option selected>Full-time</option>
+                        <option value="1">Part-time</option>
+                    </select>
                     <button id="searchJob" class="btn btn-outline-success my-2 my-sm-0 col">Search</button>
                 </div>
             </div>
-
         </div>
     </nav>
-
-
     <div class="container-fluid">
         <div class="row">
-            <nav class="col-sm-4 col-md-4 d-none d-sm-block bg-light sidebar">
+            <nav class="col-md-4 d-none d-sm-block bg-light sidebar">
                 <ul id="results" class="nav nav-pills flex-column">
-
+                    <!-- for test purposes -->
+                    <!-- ./for test purposes -->
                 </ul>
-
-
             </nav>
-
-            <main class="col-sm-9 ml-sm-auto col-md-10 pt-3" role="main">
+            <main class="col-md-8 ml-sm-auto  pt-3" role="main">
                 <b id="status">idle</b>
-
-
-
-
             </main>
         </div>
     </div>
-
-    <script>
-        // We allow nightmare to wander in the global scope by defining it here, 
-        // otherwise we would not be able to call it multiple times
-        /*
-        var Nightmare = require('nightmare');
-        var nightmare;
-        var args = {
-            show: true,
-            alwaysOnTop: true,
-            electronPath: require('./node_modules/electron')
-        };
-        */
-
-
-        document.getElementById("searchJob").addEventListener("click", function() {
-            document.getElementById("status").innerHTML = "Searching for jobs";
-
-            require('./search')
-
-
-        })
-    </script>
-
     <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script> -->
     <script>
-        window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')
+        // require('./node_modules/jquery/dist/jquery.js');
+        document.getElementById("searchJob").addEventListener("click", function() {
+            const global.loc = document.getElementById('locations').value;
+            const global.job = document.getElementById('jobTitle').value;
+            console.log("loc -> ", global.loc);
+
+            document.getElementById("status").innerHTML = "Searching for jobs";
+            document.getElementById("results").innerHTML = "";
+            /* Search Terms */
+
+            require('./search')
+        })
     </script>
-    <script src="../../../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../../../dist/js/bootstrap.min.js"></script> -->
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <!-- <script src="../../../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
 </body>
 
 </html>

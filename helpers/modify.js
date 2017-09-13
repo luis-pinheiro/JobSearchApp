@@ -4,14 +4,42 @@ const path = require('path')
 let newFile;
 var exec = require('child_process').exec;
 var json2html = require('node-json2html');
+/*
+var template = {"<>":"li","id":"${id}","html":[
+        {"<>":"a","href":"${link}","html":""},
+        {"<>":"div","class":"logoWrap","html":[
+            {"<>":"img","src":"${logo}","alt":"","html":""}
+          ]},
+        {"<>":"div","html":[
+            {"<>":"div","class":"flexbox","html":[
+                {"<>":"p","html":"${title}"},
+                {"<>":"div","html":""},
+                {"<>":"div","class":"flexbox empLoc","html":[
+                    {"<>":"div","html":[
+                        {"<>":"span","class":"subtle loc","html":"${location}"}
+                      ]},
+                    {"<>":"span","class":"date","html":[
+                        {"<>":"span","class":"minor","html":"${date}"}
+                      ]}
+                  ]},
+                {"<>":"div","class":"flexbox","html":[
+                    {"<>":"div","html":"${source}"}
+                  ]}
+              ]}
+          ]}
+      ]};
+*/
+
 
 var template = {"<>":"li","html":[
         {"<>":"a","href":"${link}","target":"_blank","html":[
-            {"<>":"img","src":"${logo}","alt":"","html":""},
+           
             {"<>":"h6","html":"${title}"},
+              {"<>":"img","src":"${logo}","alt":"","html":""},
             {"<>":"p","html":"${company}"},
             {"<>":"p","html":"${location}"},
-            {"<>":"p","html":"${source}"}
+            {"<>":"p","class":"hidden" ,"html":"${source}"},
+             {"<>":"p","html":"${date}"},
           ]}
       ]};
 
