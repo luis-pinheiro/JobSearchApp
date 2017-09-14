@@ -1,14 +1,12 @@
 # JobSearchApp
 ## Automated app for job search
 
-Built with nightmarejs.
+Built with nightmare and electron.
 
 ### Already scrapes
 - https://www.itjobs.pt
 
-- https://www.glassdoor.com
-- https://www.indeed.pt
-- http://www.empregosonline.pt/
+
 
 ### Going to scrape
 - http://www.empregos.org
@@ -26,3 +24,6 @@ Built with nightmarejs.
 - http://www.empregoestagios.com/ofertas-emprego/
 - https://www.linkedin.com/jobs/
 - http://www.net-empregos.com/
+- https://www.glassdoor.com
+- https://www.indeed.pt
+- http://www.empregosonline.pt/

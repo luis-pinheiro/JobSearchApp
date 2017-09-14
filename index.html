@@ -8,9 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
     <title>Dashboard Template for Bootstrap</title>
-    <!-- Bootstrap core CSS -->
     <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
     <link href="css/custom.css" rel="stylesheet">
     <script src="./node_modules/jquery/dist/jquery.js"></script>
 </head>
@@ -18,14 +16,12 @@
 <body>
     <nav class="navbar navbar-expand-lg fixed-top ">
         <div class="container">
-            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo02">
                 <div class="form-inline my-2 my-lg-0">
                     <input id="jobTitle" type="text" class="form-control" placeholder="Job Title" value="frontend">
-                    <!-- <input id="city" type="text" class="form-control" placeholder="City"> -->
                     <select id="locations" class="custom-select">
                         <option value="2">Açores</option>
                         <option value="1">Aveiro</option>
@@ -87,14 +83,9 @@
             </main>
         </div>
     </div>
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script> -->
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script> -->
     <script>
     window.$ = window.jQuery = require('./node_modules/jquery/dist/jquery.js');
     var web = $('#web');
-    // $('.wb').each(function() { $(this).click(function() { goWebview($(this).attr('link')) }) });
     $.each($('.wb'), function() {
             $(this).click(function() {
                 goWebview($(this).attr('link'))
@@ -102,38 +93,23 @@
         }
     );
     function goWebview(url) {
-        // var url = $(this).attr("link");
         console.log(url);
         web.attr('src', url);
     };
-
-    // $(".wb").each(function(elem) {
-    //     elem.addEventListener("click", function(event) {
-    //         var webview = $('webview');
-    //         webView.target[0].value = $(this).attr('link');
-    //     });
-    //     // elem.addEventListener('new-window', function(e) {
-    //     //     webView.target[0].value = e.url;
-    //     // });
-
-    // });
     </script>
     <script>
     let cred = require('./credentials.json');
     document.getElementById("searchJob").addEventListener("click", function() {
+//       var remote = require('remote');
+// remote.getCurrentWindow().reload();
         const locVal = document.getElementById('locations').value;
         const jobVal = document.getElementById('jobTitle').value;
         let loc = cred.loc = locVal;
-        // document.getElementById("searchJob").innerHTML = "Searching...";
         document.getElementById("results").innerHTML = "";
         let remote = cred.remote = document.getElementById("remote").checked;
-
         console.log("remote -> ", remote);
-
         require('./search');
-        // require('./puppet.js');
     })
     </script>
 </body>
-
 </html>
