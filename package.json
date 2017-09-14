@@ -37,7 +37,8 @@
         "mocha-generators": "^2.0.0",
         "nightmare": "^2.9.1",
         "nightmare-window-manager": "^0.2.2",
-        "node-json2html": "^1.1.1"
+        "node-json2html": "^1.1.1",
+        "puppeteer": "^0.10.2"
     },
     "dependencies": {}
 }

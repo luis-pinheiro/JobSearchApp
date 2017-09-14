@@ -1,14 +1,20 @@
-var exec = require("child_process").exec;
-console.log('jobTitle -> ', jobTitle.value);
-// console.log("jobLocation -> ", jobLocation.value);
 console.log("-> itJobs ");
-console.log("date ->>>>>", Date());
-var search = exports.search = function(job, loc) {
+var exec = require("child_process").exec;
+let cred = require('../credentials.json');
+let loc = cred.loc;
+let job = cred.job;
+let remote = "";
+if(cred.remote) {
+   remote = "remote=1&";
+};
+console.log("remote -> ", remote);
+console.log('loc -> ', loc);
+var search = exports.search = function() {
     return function(nightmare) {
         nightmare
-            // .goto("https://www.itjobs.pt/emprego?location=" + location + "&q=" + jobTitle.value + "&sort=date")
-            .goto("https://www.itjobs.pt/emprego?q=" + job.value + "&location=" + loc)
-            .wait()
+
+            .goto("https://www.itjobs.pt/emprego?" + remote + "location=" + loc + "&q=" + job + "&sort=date")
+
             .evaluate(function() {
                 let itJobs = [];
                 $('.block.borderless').each(function() {

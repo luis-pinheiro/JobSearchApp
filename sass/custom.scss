@@ -1,7 +1,8 @@
-.hidden{
+.hidden {
     visibility: hidden;
     display: none !important;
 }
+
 body {
     margin-top: 50px;
     nav.navbar {
@@ -10,7 +11,11 @@ body {
         padding: 12px 0;
         width: 100%;
         box-shadow: 0 1px 1px 1px rgba(127, 127, 127, 0.3);
-
+        .form-check {
+            color: #404040;
+            font-size: 16px; // height: 100%;
+            margin-right: 16px;
+        }
         .custom-select,
         #city,
         #jobTitle {
@@ -58,8 +63,7 @@ body {
                 padding: 2px;
                 background: white none;
                 border: 1px solid #dedede;
-                line-height: 0;
-                // height: 40px;
+                line-height: 0; // height: 40px;
                 vertical-align: baseline;
                 float: right;
                 max-width: 100px;
@@ -73,5 +77,29 @@ body {
                 margin-bottom: 0px !important;
             }
         }
+    }
+    main {
+        width: 100%;
+        height: 100%;
+        // min-width: 100%;
+        // min-height: 100%;
+//         #jobView{
+//             height: 100%;
+//         }
+//         webview {
+//     display: block;       /* iframes are inline by default */
+//     border: none;         /* Reset default border */
+//     height: 80vh;        /* Viewport-relative units */
+//     width: 95vw;
+// }
+
+        // webview {
+        //     display: inline-flex;
+        //     width: 100%;
+        //     height: 100%;
+        // }
+        // webview.hide {
+        //     visibility: hidden;
+        // }
     }
 }

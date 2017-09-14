@@ -24,7 +24,7 @@
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo02">
                 <div class="form-inline my-2 my-lg-0">
-                    <input id="jobTitle" type="text" class="form-control" placeholder="Job Title">
+                    <input id="jobTitle" type="text" class="form-control" placeholder="Job Title" value="frontend">
                     <!-- <input id="city" type="text" class="form-control" placeholder="City"> -->
                     <select id="locations" class="custom-select">
                         <option value="2">Açores</option>
@@ -53,6 +53,11 @@
                         <option selected>Full-time</option>
                         <option value="1">Part-time</option>
                     </select>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="remote" type="checkbox" name="remote" value=""> Remote
+                        </label>
+                    </div>
                     <button id="searchJob" class="btn btn-outline-success my-2 my-sm-0 col">Search</button>
                 </div>
             </div>
@@ -63,32 +68,71 @@
             <nav class="col-md-4 d-none d-sm-block bg-light sidebar">
                 <ul id="results" class="nav nav-pills flex-column">
                     <!-- for test purposes -->
+                    <!--   <li>
+                        <div onclick=goWebview($(this).attr('link')) link="https://www.itjobs.pt/oferta/215390/developer" class="wb">
+                            <h6> Em destaque Developer Bodum&nbsp;Porto&nbsp;Full-time</h6><img src="https://static.itjobs.pt/images/companies/4d/95d/3917/logo.png?btfc=1505136836" alt="">
+                            <p>Bodum</p>
+                            <p>Porto&nbsp;Full-time</p>
+                            <p class="hidden">itjobs.pt</p>
+                            <p></p>
+                        </div>
+                    </li> -->
                     <!-- ./for test purposes -->
                 </ul>
             </nav>
             <main class="col-md-8 ml-sm-auto  pt-3" role="main">
-                <b id="status">idle</b>
+                <div style=" height:480px">
+                    <webview id="web" src="" style=" height:480px"></webview>
+                </div>
             </main>
         </div>
     </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
-
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script> -->
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script> -->
     <script>
-        // require('./node_modules/jquery/dist/jquery.js');
-        document.getElementById("searchJob").addEventListener("click", function() {
-            const global.loc = document.getElementById('locations').value;
-            const global.job = document.getElementById('jobTitle').value;
-            console.log("loc -> ", global.loc);
+    window.$ = window.jQuery = require('./node_modules/jquery/dist/jquery.js');
+    var web = $('#web');
+    // $('.wb').each(function() { $(this).click(function() { goWebview($(this).attr('link')) }) });
+    $.each($('.wb'), function() {
+            $(this).click(function() {
+                goWebview($(this).attr('link'))
+            })
+        }
+    );
+    function goWebview(url) {
+        // var url = $(this).attr("link");
+        console.log(url);
+        web.attr('src', url);
+    };
 
-            document.getElementById("status").innerHTML = "Searching for jobs";
-            document.getElementById("results").innerHTML = "";
-            /* Search Terms */
+    // $(".wb").each(function(elem) {
+    //     elem.addEventListener("click", function(event) {
+    //         var webview = $('webview');
+    //         webView.target[0].value = $(this).attr('link');
+    //     });
+    //     // elem.addEventListener('new-window', function(e) {
+    //     //     webView.target[0].value = e.url;
+    //     // });
 
-            require('./search')
-        })
+    // });
+    </script>
+    <script>
+    let cred = require('./credentials.json');
+    document.getElementById("searchJob").addEventListener("click", function() {
+        const locVal = document.getElementById('locations').value;
+        const jobVal = document.getElementById('jobTitle').value;
+        let loc = cred.loc = locVal;
+        // document.getElementById("searchJob").innerHTML = "Searching...";
+        document.getElementById("results").innerHTML = "";
+        let remote = cred.remote = document.getElementById("remote").checked;
+
+        console.log("remote -> ", remote);
+
+        require('./search');
+        // require('./puppet.js');
+    })
     </script>
 </body>
 

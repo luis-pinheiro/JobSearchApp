@@ -31,17 +31,29 @@ var template = {"<>":"li","id":"${id}","html":[
 */
 
 
-var template = {"<>":"li","html":[
-        {"<>":"a","href":"${link}","target":"_blank","html":[
+// var template = {"<>":"li","html":[
+//         {"<>":"div","link":"${link}","class":"wb","html":[
            
-            {"<>":"h6","html":"${title}"},
-              {"<>":"img","src":"${logo}","alt":"","html":""},
-            {"<>":"p","html":"${company}"},
-            {"<>":"p","html":"${location}"},
-            {"<>":"p","class":"hidden" ,"html":"${source}"},
-             {"<>":"p","html":"${date}"},
-          ]}
-      ]};
+//             {"<>":"h6","html":"${title}"},
+//               {"<>":"img","src":"${logo}","alt":"","html":""},
+//             {"<>":"p","html":"${company}"},
+//             {"<>":"p","html":"${location}"},
+//             {"<>":"p","class":"hidden" ,"html":"${source}"},
+//              {"<>":"p","html":"${date}"},
+//           ]}
+//       ]};
+//       
+let template = {"<>":"li","html":[
+    {"<>":"div","here":"" ,"link":"${link}","class":"wb","html":[
+        {"<>":"h6","class":"title","html":"${title}"},
+        {"<>":"img","class":"logo","src":"${logo}","html":""},
+        {"<>":"p","class":"company","html":"${company}"},
+        {"<>":"p","class":"location","html":"${location}"},
+        {"<>":"p","class":"source","html":"${source}"},
+        {"<>":"p","class":"date","html":"${date}"},
+        {"<>":"p","class":"type","html":"${type}"}
+      ]}
+  ]};
 
 let modify = exports.modify = function(data) {
         console.log('Mofify -> ', data)
@@ -55,6 +67,8 @@ let modify = exports.modify = function(data) {
         
 
         data = json2html.transform(data, template);
+data = data.replace(/here=""/g, 'onClick=goWebview($(this).attr("link"))');
+
 
         fs.writeFile('data.html', data, 'utf8', (err) => {
                 if (err) throw err;

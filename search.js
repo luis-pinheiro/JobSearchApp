@@ -15,14 +15,13 @@ let jobs = [];
 
 const cred = require('./credentials.json');
 
-console.log('global -> ', global.id);
-
-const email = cred.user;
-const pass = cred.pass;
-const job = cred.job;
+console.log('cred.loc -> ', cred.loc);
 
 nightmare = Nightmare({
-    show: true,
+    openDevTools: {
+    mode: 'bottom'
+  },
+    // show: true,
     webPreferences: {
         partition: 'persist:derp'
     },
@@ -157,7 +156,7 @@ nightmare
 
     .then(function (jobs) {
         document.getElementById("results").innerHTML = jobs;
-        document.getElementById("status").innerHTML = "";
+        // document.getElementById("jobSearch").innerHTML = "Search";
     })
     // .then(() => nightmare.end())
     .catch(function(error) {
