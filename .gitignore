@@ -5,3 +5,7 @@ jobSearchApp.sublime-project
 jobSearchApp.sublime-workspace
 credentials.json
 .git
+.vscode
+js.sublime-project
+js.sublime-workspace
+yarn.lock
