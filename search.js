@@ -1,12 +1,13 @@
 const Nightmare = require('nightmare');
 const jquery = require('jquery');
 const fs = require('fs');
-const {csvFormat} = require('d3-dsv');
-const $ = require('cheerio');
-const Linkedin = require('./plugins/linkedin.js');
-const duck = require('./plugins/duck.js');
+// const {csvFormat} = require('d3-dsv');
+// const $ = require('cheerio');
+// const Linkedin = require('./plugins/linkedin.js');
+// const duck = require('./plugins/duck.js');
 const itJobs = require('./plugins/itJobs');
-const glassdoor = require('./plugins/glassdoor');
+const empregos = require('./plugins/empregos');
+// const glassdoor = require('./plugins/glassdoor');
 const modify = require('./helpers/modify.js');
 let jobsArr = [];
 let jobsArray = [];
@@ -46,6 +47,11 @@ Nightmare.action('clearCache',
 nightmare
     .use(itJobs.search())
     .then((itJobs) => jobs.push(itJobs))
+
+    .then(() => nightmare.use(empregos.search()))
+    
+
+
 
     .then(() => modify.modify(jobs))
 
